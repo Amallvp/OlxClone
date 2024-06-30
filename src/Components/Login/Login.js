@@ -5,7 +5,7 @@ import './Login.css';
 
 import { FirebaseContext } from '../../store/Context';
 import "firebase/compat/auth";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -59,7 +59,10 @@ const handleLogin=(e)=>{
           <br />
           <button>Login</button>
         </form>
+        <Link to={'/signup'} style={{textDecoration:'none'}}>
         <a>Signup</a>
+        </Link>
+       
       </div>
     </div>
   );
